@@ -14,6 +14,7 @@ body {
     color: white;
     display: grid;
     grid-template-rows: 1fr 20fr;
+    height: 130vh;
 }
 
 .sidebar ul {
@@ -37,25 +38,33 @@ body {
     font-weight: 900;
 }
 
+.main {
+    height: 100vh;
+}
+
 .header {
-    height: 40vh;
-    border: 1px solid black;
+    height: 20vh;
     display: grid;
     grid-template-rows: 1fr 1fr;
     padding: 0 50px;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
 }
 
 .header .top {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 10px;
+    justify-content: center;
+    align-content: space-between;
 }
 
 .search {
     display: grid;
     grid-template-columns: 1fr 15fr;
-    align-content: center;
+    align-content: space-between;
     align-items: center;
+    padding-top: 20px;
 }
 
 .search-btn {
@@ -81,10 +90,15 @@ body {
     grid-template-columns: 1fr 1fr 3fr;
     align-items: center;
     justify-items: center;
+    padding-top: 10px;
 }
 
 .profile-picture {
     border-radius: 50%;
+}
+
+.username {
+    font-weight: bold;
 }
 
 .bottom {
@@ -95,6 +109,9 @@ body {
 .bottom-left {
     display: grid;
     grid-template-columns: 1fr 10fr;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
 }
 
 /* .profile-name {
@@ -102,3 +119,85 @@ body {
     grid-template-rows: 1fr 1fr;
     padding: 0;
 } */
+
+.greeting, .full-profile-name {
+    margin: 0;
+    font-weight: bold;
+}
+
+.greeting {
+    font-size: 12px;
+}
+
+.profile-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    background-color: #1099ff;
+    color: white;
+}
+
+.main-content {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: rgb(220, 225, 240)
+}
+
+.projects-wrapper {
+    display: grid;
+    grid-template-rows: 0fr 4fr;
+    padding: 0 10px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.projects-title {
+    font-weight: bold;
+}
+
+.side {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid black;
+    padding: 0 10px;
+    display: grid;
+    grid-template-rows: 0fr 2fr 1fr;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid rgb(255, 220, 0);
+    border-right: 5px solid rgb(255, 220, 0);
+}
+
+.card-title {
+    margin-bottom: 0;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.card-description {
+    margin-top: 0;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
